@@ -16,7 +16,7 @@ func NewUserRepositoryDB(db *sqlx.DB) UsererRepository {
 }
 
 func (r *UserRepositoryDB) Create(ctx context.Context, userId int, username, phone, email string) error {
-	_, err := r.db.ExecContext(ctx, "INSERT INTO users (id, username, phone, email, subscription_lvl, current_gym_id) VALUES ($1, $2, $3, $4)", userId, username, phone, email, 0, 0)
+	_, err := r.db.ExecContext(ctx, "INSERT INTO users (id, username, phone, email, subscription_lvl, current_gym_id) VALUES ($1, $2, $3, $4, $5, $6)", userId, username, phone, email, 0, 0)
 	return err
 }
 

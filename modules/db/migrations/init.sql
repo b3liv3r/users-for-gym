@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS users (
-    id SERIAL PRIMARY KEY,
+    id BIGINT UNIQUE,
     username VARCHAR(255),
     phone VARCHAR(20),
     email VARCHAR(255),
